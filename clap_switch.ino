@@ -42,7 +42,7 @@ void loop() {
   }        
   else{ //don't detect CLAPS unless it's needed
     sound_value = analogRead(input_pin);
-    if(sound_value > 6){ //on clap, update recent_claps and lcTime
+    if(sound_value > 6){ //on clap (analog input above 6 in this case), update recent_claps and lcTime 
       last_clap_time = millis();
       recent_claps++;
     }
